@@ -27,7 +27,7 @@ const Products = () => {
         const fetchProducts = async () => {
             setLoading(true);
             try {
-                const response = await axios.get('http://localhost:5001/products', { params: filters });
+                const response = await axios.get('https://shop-stream-mu.vercel.app/products', { params: filters });
                 setProducts(response.data.products);
                 setTotalPages(response.data.totalPages);
                 setLoading(false);
